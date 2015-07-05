@@ -1,0 +1,12 @@
+{
+  "name": "autoresponsive_react_native_sample",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh"
+  },
+  "dependencies": {
+    "autoresponsive-react-native": "^1.0.4",
+    "react-native": "^0.6.0"
+  }
+}
