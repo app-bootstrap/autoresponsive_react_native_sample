@@ -1,11 +1,22 @@
-autoresponsive-react-native-sample
-==================================
+# autoresponsive-react-native-sample
 
 Auto responsive grid layout library for [ReactNative](https://facebook.github.io/react-native/).
 
+## Run
+
+```shell
+$ react-native run-android
+```
+
 ## ScreenShot
 
-![](./screenshot.gif)
+iOS
+
+![iOS](./screenshot/ios.gif)
+
+Android
+
+![Android](./screenshot/android.png)
 
 ## License
 
