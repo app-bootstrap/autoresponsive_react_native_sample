@@ -13,18 +13,18 @@
 
 let React = require('react-native');
 let AutoResponisve = require('autoresponsive-react-native');
-let Dimensions = require('Dimensions');
-
-const screenWidth = Dimensions.get('window').width;
-const noop = function() {};
 
 let {
   AppRegistry,
   StyleSheet,
   Text,
   View,
-  ScrollView
+  ScrollView,
+  Dimensions
 } = React;
+
+const screenWidth = Dimensions.get('window').width;
+const noop = function() {};
 
 class Sample extends React.Component {
   constructor(props) {
