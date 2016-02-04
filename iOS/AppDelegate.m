@@ -8,7 +8,6 @@
  */
 
 #import "AppDelegate.h"
-
 #import "RCTRootView.h"
 
 @implementation AppDelegate
@@ -16,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
-
+  
   /**
    * Loading JavaScript code - uncomment the one you want.
    *
@@ -30,9 +29,9 @@
    * `inet` value under `en0:`) and make sure your computer and iOS device are
    * on the same Wi-Fi network.
    */
-
-  jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.103:8081/index.ios.bundle"];
-
+  
+  jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
+  
   /**
    * OPTION 2
    * Load from pre-bundled file on disk. To re-generate the static bundle
@@ -42,13 +41,11 @@
    *
    * see http://facebook.github.io/react-native/docs/runningondevice.html
    */
-
-//   jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-
-  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                      moduleName:@"autoresponsive_react_native_sample"
-                                                   launchOptions:launchOptions];
-
+  
+  //jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"autoresponsive_react_native_sample" initialProperties:nil launchOptions:launchOptions];
+  
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [[UIViewController alloc] init];
   rootViewController.view = rootView;
