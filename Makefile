@@ -8,13 +8,10 @@ start:
 	@npm run start
 clean:
 	@rm -rf build
-test: install lint
-	@NODE_ENV=test $(BIN) $(FLAGS) \
-		${npm_bin}/istanbul cover	${npm_bin}/_mocha --report lcovonly
-travis: test start
-	@${npm_bin}/macaca run --no-window
-build:
-	xcodebuild clean build -scheme autoresponsive_react_native_sample
+test: install build
+	APP_PATH=${shell find ~/Library/Developer/Xcode -name autoresponsive_react_native_sample.app} ${npm_bin}/macaca run --verbose -d ./test
+build: install
+	xcodebuild clean build -scheme autoresponsive_react_native_sample -sdk iphonesimulator9.3 CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
 lint:
 	@${npm_bin}/eslint
-.PHONY: test
+.PHONY: all test build

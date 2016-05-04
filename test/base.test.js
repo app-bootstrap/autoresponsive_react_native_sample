@@ -17,7 +17,7 @@ var iOSOpts = {
   platformVersion: '9.3',
   deviceName: 'iPhone 5s',
   platformName: 'iOS',
-  app: 'path to app'
+  app: process.env.APP_PATH
 };
 
 var wd = require('webdriver-client')(iOSOpts);
@@ -26,6 +26,10 @@ describe('base', function() {
   this.timeout(5 * 60 * 1000);
 
   var driver = wd.initPromiseChain();
+
+  driver.configureHttp({
+    timeout: 1200000
+  });
 
   before(function() {
     return driver

@@ -83,11 +83,17 @@ class Sample extends React.Component {
     }, this);
   }
 
+  onPressTitle() {
+    this.setState({
+      array: [...this.state.array, parseInt(Math.random() * 30)]
+    });
+  }
+
   render() {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.title}>
-          <Text style={styles.titleText}>autoresponsive</Text>
+          <Text onPress={this.onPressTitle.bind(this)} style={styles.titleText}>autoresponsive</Text>
         </View>
         <AutoResponisve {...this.getAutoResponisveProps()}>
         {this.renderChildren()}

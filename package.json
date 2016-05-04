@@ -1,14 +1,13 @@
 {
   "name": "autoresponsive_react_native_sample",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh",
     "clean:babelrc": "find ./node_modules -name react-packager -prune -o -name '.babelrc' -print | xargs rm -f",
     "postinstall": "npm run clean:babelrc"
   },
   "dependencies": {
-    "autoresponsive-react-native": "1.0.6",
+    "autoresponsive-react-native": "~1.0.6",
     "react-native": "~0.19.0"
   },
   "devDependencies": {
