@@ -14,9 +14,7 @@ test: install lint
 travis: test start
 	@${npm_bin}/macaca run --no-window
 build:
-	@echo build
+	xcodebuild clean build -scheme autoresponsive_react_native_sample
 lint:
 	@${npm_bin}/eslint
-build:
-	@${npm_bin}/babel lib/ --out-dir dist/
 .PHONY: test
