@@ -17,7 +17,7 @@ $ react-native run-android
 
 iOS
 
-![iOS](./screenshot/ios.gif)
+![iOS](./screenshot/ios.png)
 
 Android
 

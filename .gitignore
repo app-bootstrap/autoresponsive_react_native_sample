@@ -33,6 +33,9 @@ local.properties
 node_modules/
 npm-debug.log
 
+# screenshot
+screenshot/*-diff.png
+
 *.swp
 *.swo
 *.swn

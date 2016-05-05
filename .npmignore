@@ -21,6 +21,9 @@ DerivedData
 *.ipa
 *.xcuserstate
 
+# screenshot
+screenshot/*-diff.png
+
 # node.js
 #
 node_modules/
