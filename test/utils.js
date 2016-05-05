@@ -25,7 +25,7 @@ function diffImage(imageAPath, imageB, threshold, outputPath) {
       imageOutputPath: outputPath
     });
 
-    diff.run(function(err, result) {
+    diff.run((err, result) => {
       if (err) {
         return reject(err);
       }
