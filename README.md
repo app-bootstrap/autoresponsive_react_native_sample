@@ -22,7 +22,7 @@ $ react-native run-android
 
 ## ScreenShot
 
-Screenshots of iOS & Android frome automation test.
+Screenshots of iOS & Android which generated from automation test.
 
 <img src="./screenshot/ios.png" width="300"/> <img src="./screenshot/android.png" width="300"/>
 
