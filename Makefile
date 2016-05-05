@@ -10,7 +10,7 @@ clean:
 	@rm -rf build
 test: install build
 	APP_PATH=${shell find ~/Library/Developer/Xcode -name autoresponsive_react_native_sample.app} ${npm_bin}/macaca run --verbose -d ./test
-build: install
+build:
 	xcodebuild clean build -scheme autoresponsive_react_native_sample -sdk iphonesimulator9.3 CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
 test-android: install build-android
 	platform=android APP_PATH=./android/app/build/outputs/apk/app-release-unsigned.apk ${npm_bin}/macaca run --verbose -d ./test

@@ -13,7 +13,10 @@
 
 'use strict';
 
+var fs = require('fs');
 var path = require('path');
+
+var diffImage = require('./utils.js').diffImage;
 
 var appPath = path.resolve(process.env.APP_PATH);
 
@@ -51,8 +54,19 @@ describe('base', function() {
       .quit();
   });
 
-  it('#1 should login success', function() {
+  it('#1 login picture should be the same.', function() {
     return driver
-      .sleep(1000);
+      .sleep(3000)
+      .takeScreenshot()
+      .then(imgData => {
+        var newImg = new Buffer(imgData, 'base64');
+        var screenshotFolder = path.resolve(__dirname, '../screenshot');
+        var oldImgPath = path.join(screenshotFolder, process.env.platform === 'android' ? 'android.png' : 'ios.png');
+        var diffImgPath = path.join(screenshotFolder, process.env.platform === 'android' ? 'android-diff.png' : 'ios-diff.png');
+        return diffImage(oldImgPath, newImg, 0.1, diffImgPath);
+      })
+      .then(result => {
+        result.should.be.true();
+      })
   });
 });
