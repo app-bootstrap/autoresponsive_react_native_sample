@@ -1,6 +1,6 @@
 {
   "name": "autoresponsive_react_native_sample",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh",
     "clean:babelrc": "find ./node_modules -name react-packager -prune -o -name '.babelrc' -print | xargs rm -f",

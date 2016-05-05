@@ -13,14 +13,23 @@
 
 'use strict';
 
+var path = require('path');
+
+var appPath = path.resolve(process.env.APP_PATH);
+
 var iOSOpts = {
   platformVersion: '9.3',
   deviceName: 'iPhone 5s',
   platformName: 'iOS',
-  app: process.env.APP_PATH
+  app: appPath
 };
 
-var wd = require('webdriver-client')(iOSOpts);
+var androidOpts = {
+  platformName: 'android',
+  app: appPath
+};
+
+var wd = require('webdriver-client')(process.env.platform === 'android' ? androidOpts : iOSOpts);
 
 describe('base', function() {
   this.timeout(5 * 60 * 1000);
