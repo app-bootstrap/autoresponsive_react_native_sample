@@ -56,7 +56,8 @@ describe('base', function() {
 
   it('#1 login picture should be the same.', function() {
     return driver
-      .sleep(3000)
+      .sleep(10000)
+      .waitForElementByName('autoresponsive')
       .takeScreenshot()
       .then(imgData => {
         var newImg = new Buffer(imgData, 'base64');
