@@ -40,7 +40,7 @@ describe('base', function() {
   var driver = wd.initPromiseChain();
 
   driver.configureHttp({
-    timeout: 300 * 60 * 1000
+    timeout: 500 * 60 * 1000
   });
 
   before(function() {
