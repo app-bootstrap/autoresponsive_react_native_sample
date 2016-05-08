@@ -1,9 +1,6 @@
 os: osx
 osx_image: xcode7.3
 before_install:
-  - DevToolsSecurity -enable
 install:
-  - brew reinstall node flow watchman xctool
-  - npm install -g react-native-cli
 script:
   - make test
