@@ -10,8 +10,6 @@ clean:
 	find ~/Library/Developer/Xcode -name autoresponsive_react_native_sample.app | xargs rm -rf
 test: install build
 	APP_PATH=${shell find ~/Library/Developer/Xcode -name autoresponsive_react_native_sample.app} ${npm_bin}/macaca run --verbose -d ./test
-	curl http://xdf.me
-	curl http://localhost:8081/index.ios.bundle?platform=ios&dev=true
 build:
 	xcodebuild clean build -scheme autoresponsive_react_native_sample -configuration Debug -sdk iphonesimulator9.3 CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
 test-android: install build-android
