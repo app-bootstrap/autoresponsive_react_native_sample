@@ -15,7 +15,7 @@ build:
 test-android: install build-android
 	platform=android APP_PATH=./android/app/build/outputs/apk/app-debug.apk ${npm_bin}/macaca run --verbose -d ./test
 build-android:
-	cd android && ./gradlew clean assembleDebug
+	cd android && chmod +x ./gradlew; ls -l gradlew; ./gradlew wrapper -v && ./gradlew clean assembleDebug --stacktrace
 lint:
 	@${npm_bin}/eslint
 .PHONY: all test build

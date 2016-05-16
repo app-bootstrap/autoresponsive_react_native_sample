@@ -5,6 +5,5 @@ before_install:
   - "sed 's/localhost.localdomain localhost/localhost localhost.localdomain/' /etc/hosts > /tmp/etchoststmp && cat /tmp/etchoststmp | sudo tee /etc/hosts"
 install:
   - brew reinstall node flow watchman xctool
-  - npm install -g react-native-cli
 script:
   - make test
