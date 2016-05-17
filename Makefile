@@ -15,8 +15,7 @@ build:
 test-android: install build-android
 	platform=android APP_PATH=./android/app/build/outputs/apk/app-release-unsigned.apk ${npm_bin}/macaca run --verbose -d ./test
 build-android:
-	${npm_bin}/react-native run-android
-	sleep 30s
+	cd android && chmod +x ./gradlew; ls -l gradlew; ./gradlew wrapper -v && ./gradlew clean assembleRelease --stacktrace
 lint:
 	@${npm_bin}/eslint
 .PHONY: all test build
