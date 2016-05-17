@@ -56,7 +56,7 @@ describe('base', function() {
 
   it('#1 login picture should be the same.', function() {
     return driver
-      .sleep(60 * 1000)
+      .sleep(40 * 1000)
       .waitForElementByName('autoresponsive')
       .takeScreenshot()
       .then(imgData => {
@@ -64,7 +64,7 @@ describe('base', function() {
         var screenshotFolder = path.resolve(__dirname, '../screenshot');
         var oldImgPath = path.join(screenshotFolder, process.env.platform === 'android' ? 'android.png' : 'ios.png');
         var diffImgPath = path.join(screenshotFolder, process.env.platform === 'android' ? 'android-diff.png' : 'ios-diff.png');
-        return diffImage(oldImgPath, newImg, 0.1, diffImgPath);
+        return diffImage(oldImgPath, newImg, 0.3, diffImgPath);
       })
       .then(result => {
         result.should.be.true();
