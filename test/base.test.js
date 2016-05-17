@@ -69,5 +69,8 @@ describe('base', function() {
       .then(result => {
         result.should.be.true();
       })
+      .catch(e => {
+        console.log(e);
+      });
   });
 });
