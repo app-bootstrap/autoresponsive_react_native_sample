@@ -26,35 +26,31 @@ let {
 
 let styles = StyleSheet.create({
   container: {
-    backgroundColor: '#301711'
+    backgroundColor: '#301711',
   },
   title: {
     paddingTop: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   titleText: {
     color: '#d0bbab',
     textAlign: 'center',
     fontSize: 36,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   text: {
     textAlign: 'center',
     fontSize: 60,
     fontWeight: 'bold',
-    color: 'rgb(58, 45, 91)'
+    color: 'rgb(58, 45, 91)',
   }
 });
 
-const screenWidth = Dimensions.get('window').width;
-const noop = function() {};
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class Sample extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      array: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    };
+  state = {
+    array: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
   }
 
   getChildrenStyle() {
@@ -63,18 +59,18 @@ class Sample extends React.Component {
       height: parseInt(Math.random() * 20 + 12) * 10,
       backgroundColor: 'rgb(92, 67, 155)',
       paddingTop: 20,
-      borderRadius: 8
+      borderRadius: 8,
     };
   }
 
-  getAutoResponisveProps() {
+  getAutoResponsiveProps() {
     return {
-      itemMargin: 8
+      itemMargin: 8,
     };
   }
 
   renderChildren() {
-    return this.state.array.map(function(i, key) {
+    return this.state.array.map((i, key) => {
       return (
         <View style={this.getChildrenStyle()} key={key}>
           <Text style={styles.text}>{i}</Text>
@@ -83,9 +79,9 @@ class Sample extends React.Component {
     }, this);
   }
 
-  onPressTitle() {
+  onPressTitle = () => {
     this.setState({
-      array: [...this.state.array, parseInt(Math.random() * 30)]
+      array: [...this.state.array, parseInt(Math.random() * 30)],
     });
   }
 
@@ -93,10 +89,10 @@ class Sample extends React.Component {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.title}>
-          <Text onPress={this.onPressTitle.bind(this)} style={styles.titleText}>autoresponsive</Text>
+          <Text onPress={this.onPressTitle} style={styles.titleText}>autoresponsive</Text>
         </View>
-        <AutoResponisve {...this.getAutoResponisveProps()}>
-        {this.renderChildren()}
+        <AutoResponisve {...this.getAutoResponsiveProps()}>
+          {this.renderChildren()}
         </AutoResponisve>
       </ScrollView>
     );
