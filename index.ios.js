@@ -15,6 +15,7 @@
 
 let Sample = require('./sample');
 let React = require('react-native');
+import { Component } from 'react';
 
 let {
   AppRegistry
