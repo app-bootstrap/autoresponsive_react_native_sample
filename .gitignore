@@ -36,9 +36,5 @@ npm-debug.log
 # screenshot
 screenshot/*-diff.png
 
-*.swp
-*.swo
-*.swn
-*.swl
-*.swm
-.sw*
+*.sw*
+*.un~

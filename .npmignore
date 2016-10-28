@@ -28,3 +28,6 @@ screenshot/*-diff.png
 #
 node_modules/
 npm-debug.log
+
+*.sw*
+*.un~
