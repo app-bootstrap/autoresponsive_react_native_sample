@@ -15,6 +15,7 @@
 
 let React = require('react-native');
 let AutoResponisve = require('autoresponsive-react-native');
+import { Component } from 'react';
 
 let {
   StyleSheet,
@@ -48,7 +49,7 @@ let styles = StyleSheet.create({
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
-class Sample extends React.Component {
+class Sample extends Component {
   state = {
     array: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
   }
