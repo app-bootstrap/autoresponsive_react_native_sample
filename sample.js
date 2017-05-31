@@ -14,7 +14,7 @@
 'use strict';
 
 let React = require('react-native');
-let AutoResponisve = require('autoresponsive-react-native');
+let AutoResponsive = require('autoresponsive-react-native');
 
 let {
   StyleSheet,
@@ -91,9 +91,9 @@ class Sample extends React.Component {
         <View style={styles.title}>
           <Text onPress={this.onPressTitle} style={styles.titleText}>autoresponsive</Text>
         </View>
-        <AutoResponisve {...this.getAutoResponsiveProps()}>
+        <AutoResponsive {...this.getAutoResponsiveProps()}>
           {this.renderChildren()}
-        </AutoResponisve>
+        </AutoResponsive>
       </ScrollView>
     );
   }
