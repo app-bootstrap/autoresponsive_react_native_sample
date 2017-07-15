@@ -21,7 +21,6 @@ var diffImage = require('./utils.js').diffImage;
 var appPath = path.resolve(process.env.APP_PATH);
 
 var iOSOpts = {
-  platformVersion: '9.3',
   deviceName: 'iPhone 5s',
   platformName: 'iOS',
   app: appPath
@@ -45,7 +44,8 @@ describe('base', function() {
 
   before(function() {
     return driver
-      .initDriver();
+      .initDriver()
+      .sleep(20 * 1000);
   });
 
   after(function() {
