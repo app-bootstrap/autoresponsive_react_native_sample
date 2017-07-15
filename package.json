@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "eslint-plugin-react": "^5.0.1",
-    "macaca-cli": "^1.0.24",
+    "macaca-cli": "^2.0.4",
     "react-native-cli": "^0.2.0",
     "webdriver-client": "^1.0.9"
   }
