@@ -16,7 +16,7 @@ Auto responsive grid layout library for [ReactNative](https://facebook.github.io
 
 ## Run
 
-``` bash
+```bash
 $ react-native run-android
 ```
 
