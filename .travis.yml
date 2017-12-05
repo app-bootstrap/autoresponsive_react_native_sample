@@ -2,7 +2,7 @@ os: osx
 osx_image: xcode7.3
 sudo: required
 before_install:
-  - "sed 's/localhost.localdomain localhost/localhost localhost.localdomain/' /etc/hosts > /tmp/etchoststmp && cat /tmp/etchoststmp | sudo tee /etc/hosts"
+  - sed 's/localhost.localdomain localhost/localhost localhost.localdomain/' /etc/hosts > /tmp/etchoststmp && cat /tmp/etchoststmp | sudo tee /etc/hosts
 install:
   - brew reinstall node flow watchman xctool
 script:
