@@ -2,19 +2,20 @@
   "name": "autoresponsive_react_native_sample",
   "version": "1.0.28",
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh",
+    "dev:ios": "react-native run-ios",
+    "dev:android": "react-native run-android",
     "clean:babelrc": "find ./node_modules -name react-packager -prune -o -name '.babelrc' -print | xargs rm -f",
     "postinstall": "npm run clean:babelrc"
   },
   "dependencies": {
     "autoresponsive-react-native": "~1.0.6",
-    "blink-diff": "~1.0.12",
-    "react-native": "~0.19.0"
+    "blink-diff": "~1.0.12"
   },
   "devDependencies": {
     "eslint-plugin-react": "^5.0.1",
     "macaca-cli": "^2.0.4",
-    "react-native-cli": "^0.2.0",
+    "react-native": "^0.52.0",
+    "react-native-cli": "^2.0.1",
     "webdriver-client": "^1.0.9"
   }
 }
