@@ -26,6 +26,18 @@ Screenshots of iOS & Android which generated from automation test.
 
 <img src="./screenshot/ios.png" width="300"/> <img src="./screenshot/android.png" width="300"/>
 
+<!-- GITCONTRIBUTOR_START -->
+
+## Contributors
+
+|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars1.githubusercontent.com/u/1044425?v=4" width="100px;"/><br/><sub><b>ziczhu</b></sub>](https://github.com/ziczhu)<br/>
+| :---: | :---: |
+
+
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto upated at `Thu Apr 05 2018 23:08:19 GMT+0800`.
+
+<!-- GITCONTRIBUTOR_END -->
+
 ## License
 
 MIT Licensed. Copyright (c) xdf 2015.

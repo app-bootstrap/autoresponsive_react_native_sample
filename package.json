@@ -5,7 +5,8 @@
     "dev:ios": "react-native run-ios",
     "dev:android": "react-native run-android",
     "clean:babelrc": "find ./node_modules -name react-packager -prune -o -name '.babelrc' -print | xargs rm -f",
-    "postinstall": "npm run clean:babelrc"
+    "postinstall": "npm run clean:babelrc",
+    "contributor": "git-contributor"
   },
   "dependencies": {
     "autoresponsive-react-native": "~1.0.6",
@@ -13,6 +14,7 @@
   },
   "devDependencies": {
     "eslint-plugin-react": "^5.0.1",
+    "git-contributor": "^1.0.5",
     "macaca-cli": "^2.0.4",
     "react-native": "^0.52.0",
     "react-native-cli": "^2.0.1",
