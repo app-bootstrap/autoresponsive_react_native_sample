@@ -34,7 +34,7 @@ Screenshots of iOS & Android which generated from automation test.
 | :---: | :---: |
 
 
-This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto upated at `Thu Apr 05 2018 23:08:19 GMT+0800`.
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto upated at `Sat Apr 21 2018 17:31:36 GMT+0800`.
 
 <!-- GITCONTRIBUTOR_END -->
 
